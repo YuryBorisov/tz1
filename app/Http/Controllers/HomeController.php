@@ -16,6 +16,10 @@ class HomeController extends Controller
         return view('index');
     }
 
+    /*
+     * Можно и нужно использовать isset and is_numeric в одном if, но я написал так, что бы можно было отследить глубину ошибки
+     */
+
     public function calc(Request $request){
         $data = $request->all();
         if(isset($data['one'])){
